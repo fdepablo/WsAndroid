@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Este fichero es el que lee android cuando instala y cuando arranca una app en  nuestro
+      movil
+
+      Podemos encontrar las siguientes propiedades dentro de application
+
+      icon -> El icono que paracera como laucher
+      theme -> El tema por defecto de la aplicacion (estilos)
+
+      Dentro de la etiqueta application tambien irán todas las actividades que tenemos
+      asociadas a nuestra aplicacion. La activity hace de intermediario entre la vista
+      de nuestra aplicacion  (XML) y la logica de negocio (Java o kotlin)
+
+      Dentro de este fichero tambien irán asociados los permisos que tiene que dar
+      el usuario para poder usar la app
+      -->
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme._01_TextViewEditText"
+        tools:targetApi="31">
+        <!-- Esta sería la actividad principal que se muestra en nuestro programa -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
