@@ -1,4 +1,4 @@
-package com.example.a16_intentforresult;
+package com.example.a05_intentforresult;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,9 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
-import com.example.a16_intentforresult.entidad.Usuario;
+import com.example.a05_intentforresult.entidad.Usuario;
 
 public class SecondActivity extends AppCompatActivity {
 

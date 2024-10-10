@@ -1,4 +1,4 @@
-package com.example.a16_intentforresult.entidad;
+package com.example.a05_intentforresult.entidad;
 
 import java.io.Serializable;
 

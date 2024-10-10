@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SecondActivity">
+
+    <TextView android:text="Introduzca nombre y edad"
+        android:textSize="24sp"
+        android:textColor="@color/design_default_color_primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText android:text=""
+        android:id="@+id/tvNombre"
+        android:textSize="24sp"
+        android:minHeight="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText android:text=""
+        android:id="@+id/tvEdad"
+        android:textSize="24sp"
+        android:minHeight="48dp"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/botonVolver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        />
+
+</LinearLayout>
