@@ -64,10 +64,15 @@
             android:text="opcion_2" />
     </RadioGroup>
 
+    <!-- Android recomienda poner todos los textos
+    de cadena dentro de res/values/strings.xml ,
+    para evitar el "codigo duro" o "hardcode"
+    Esto facilita la internacionalización o "i18n"
+    -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Opcion elegida: "
+        android:text="@string/elijaOpcion"
         android:textSize="18sp"
         android:textColor="#0000FF"
         android:id="@+id/tvMensaje"

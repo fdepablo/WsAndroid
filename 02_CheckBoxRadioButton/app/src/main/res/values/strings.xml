@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">02_CheckBoxRadioButton</string>
     <string name="opcion1">Opcion 1 desde los recursos!</string>
+    <string name="elijaOpcion">Elija una opcion:</string>
 </resources>
