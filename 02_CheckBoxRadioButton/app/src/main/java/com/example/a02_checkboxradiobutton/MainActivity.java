@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         //La clase Log te permite crear mensajes del registro que se muestran en logcat.
         // Por lo general, debes usar los siguientes métodos de registro, que se ordenan de
         // mayor a menor prioridad (o del más detallado al menos detallado).
-        //Esto nos servirá para poder buscar mensajes de manerá más sencilla
 
         // Log.e(String, String) (error)
         // Log.w(String, String) (advertencia)
@@ -36,8 +35,38 @@ public class MainActivity extends AppCompatActivity {
         // Log.d(String, String) (depuración)
         // Log.v(String, String) (registro detallado)
 
+        //Esto nos servirá para poder buscar mensajes de manerá más sencilla
+
+        /*
+        Los niveles de log permiten clasificar los mensajes según su gravedad o importancia.
+
+        ERROR: Indica errores en el flujo de la aplicación que pueden interrumpir el funcionamiento
+        normal, como excepciones y fallos de operaciones importantes. Estos errores suelen
+        necesitar atención para ser corregidos.
+
+        WARN: Señala situaciones que podrían ser problemáticas pero que no impiden la ejecución de
+        la aplicación. Por ejemplo, el uso de una funcionalidad obsoleta o configuraciones
+        potencialmente problemáticas.
+
+        INFO: Indica el funcionamiento normal de la aplicación. Estos mensajes informan sobre el
+        progreso y los eventos generales, como el inicio de servicios, carga de configuraciones,
+        etc.
+
+        DEBUG: Ofrece detalles de depuración y es comúnmente usado para desarrollo y pruebas.
+        Los mensajes DEBUG ayudan a entender el flujo del código y la ejecución de métodos.
+
+        VERBOSE: Proporciona el nivel más detallado de información, útil para rastrear el flujo
+        detallado de una aplicación. Suele incluir gran cantidad de información específica para
+        depuración profunda.
+
+        Orden de los Niveles
+        --------------------
+        Si defines un logger con un nivel específico, por ejemplo INFO, solo mostrará mensajes de
+        ese nivel y niveles más altos (INFO, WARN, ERROR).
+         */
+
         //Normalmente como primer parámetro le pasaremos la actividad que escribe el Log
-        //Como segundo parámetro pondremos un mensaje
+        //Como segundo parámetro pondremos el mensaje que queremos mostrar según su gravedad
         Log.i("MainActivity","Aplicación arrancada");
 
         final CheckBox cbMarcame = findViewById(R.id.cbMarcame);
