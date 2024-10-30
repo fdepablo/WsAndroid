@@ -66,9 +66,11 @@ public class MainActivity extends AppCompatActivity {
             String nombreUsuario = textoNombreUsuario.getText().toString();
             String passwordUsuario = textoPasswordUsuario.getText().toString();
 
+            //Una manera sería pasando individualmente la información
             intent.putExtra(K_NOMBRE_USUARIO, nombreUsuario);
-            intent.putExtra(K_PASSWORD_USUARIO, nombreUsuario);
+            intent.putExtra(K_PASSWORD_USUARIO, passwordUsuario);
 
+            //La otra manera sería con un objeto serializable
             Usuario usuario = new Usuario();
             usuario.setNombre(nombreUsuario);
             usuario.setPassword(passwordUsuario);
@@ -76,6 +78,12 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra(K_USUARIO,usuario);
 
             //Decimos a android que vaya a dicha Activity
+            startActivity(intent);
+        });
+
+        Button boton = findViewById(R.id.botonTerceraActividad);
+        boton.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
             startActivity(intent);
         });
     }

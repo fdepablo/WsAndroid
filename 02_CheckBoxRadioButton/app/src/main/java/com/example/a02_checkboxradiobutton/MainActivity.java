@@ -91,20 +91,9 @@ public class MainActivity extends AppCompatActivity {
         //mejor hacer una clase de verdad
         cbMarcame2.setOnClickListener(new MiOnClickListenerCheckbox());
         cbMarcame3.setOnClickListener(new MiOnClickListenerCheckbox());
-
-        cbMarcame4.setOnClickListener((v)->{
-            CheckBox checkBox = (CheckBox) v;
-            boolean isChecked = checkBox.isChecked();
-
-            if (isChecked) {
-                checkBox.setText("Checkbox marcado!");
-            } else {
-                checkBox.setText("Checkbox desmarcado!");
-            }
-        });
+        cbMarcame4.setOnClickListener(new MiOnClickListenerCheckbox());
 
         final TextView tvMensaje = findViewById(R.id.tvMensaje);
-
         RadioGroup rgOpciones = findViewById(R.id.rgGrupo1);
 
         //Este evento se desencadena cuando hay un cambio en el radiogroup
@@ -116,13 +105,8 @@ public class MainActivity extends AppCompatActivity {
 
             String opcion = "";
             if(checkedId == R.id.rbOpcion1) {
+                //podemos acceder a los recursos para parametrizar los valores
                 opcion = getResources().getString(R.string.opcion1);
-                //Podemos obtener los recursos de diferentes maneras
-                //getResources().getString(R.string.app_name);
-                //this.getResources().getIdentifier("nameOfDrawable", "drawable", this.getPackageName());
-                //int o = MainActivity.this.getResources().getIdentifier("app_name","values",MainActivity.this.getPackageName());
-                //System.out.println("El codigo devuelto es: "+o);
-                //opcion = getResources().getString(o);
             }else if(checkedId == R.id.rbOpcion2){
                 opcion = "Opcion 2 desde código!";
             }

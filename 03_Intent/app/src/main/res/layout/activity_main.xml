@@ -35,4 +35,9 @@
         android:layout_height="wrap_content"
         android:text="Pulsa para la siguiente actividad"
         android:id="@+id/botonSiguienteActividad"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pulsa para la tercera actividad"
+        android:id="@+id/botonTerceraActividad"/>
 </LinearLayout>
