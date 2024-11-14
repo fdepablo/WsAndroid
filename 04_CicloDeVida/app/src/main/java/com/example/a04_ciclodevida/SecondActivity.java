@@ -10,43 +10,43 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("RestarActivity", "onCreate()");
+        Log.d("SecondActivity", "onCreate()");
         setContentView(R.layout.activity_second);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d("RestarActivity", "onStart()");
+        Log.d("SecondActivity", "onStart()");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d("RestarActivity", "onRestart()");
+        Log.d("SecondActivity", "onRestart()");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d("RestarActivity", "onResume()");
+        Log.d("SecondActivity", "onResume()");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("RestarActivity", "onPause()");
+        Log.d("SecondActivity", "onPause()");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d("RestarActivity", "onStop()");
+        Log.d("SecondActivity", "onStop()");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d("RestarActivity", "onDestroy()");
+        Log.d("SecondActivity", "onDestroy()");
     }
 }

@@ -11,6 +11,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
  /*
+
+   Las actividades se van apilando a medida que se van abriendo en lo que s
+   se llama, la pila de actividades.
+
+   Cada vez que abrimos una actividad, mediante un intent generalmente, se
+   apila sobre la anterior. De tal manera que si eliminamos la actividad
+   superior que esta apilada, se mostrará automáticamente la que este debajo
+   de ella.
+
+
     una actividad puede atravesar los siguientes estados para mantener:
 
     1. Inexistente, la actividad no existe
@@ -89,9 +99,9 @@ public class MainActivity extends AppCompatActivity {
     Al volver a la app,  tendremos exactamente el flujo onRestart() > onStart() > onResume() y
     la actividad mantendrá sus valores.
 
-    5- Si vamos a la actividad de restar podemos ver como tenemos un comportamiento muy parecido
+    5- Si vamos a la actividad de SecondActivity podemos ver como tenemos un comportamiento muy parecido
     a los anteriores ejemplos, pero esta vez tambien pasaremos por los estados del ciclo de vida
-    de RestarActivity
+    de SecondActivity
 
     6- Android está diseñado para acabar con los procesos de apps de baja prioridad si en
     el primer plano hay una app que requiere recursos adicionales.
@@ -140,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * Es el lugar donde se incluye la mayor de la inicialización. Tareas prioritarias como:
      *
-     * 1- Inflar la UI de la actividad con setContentView()
+     * 1- Crear la UI de la actividad con setContentView()
      * 2- Agregar fragmentos
      * 3- Obtener referencias de views con findViewById()
      * 4- Iniciar consultas iniciales a fuentes de datos
