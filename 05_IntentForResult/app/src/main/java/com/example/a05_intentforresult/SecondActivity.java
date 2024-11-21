@@ -35,7 +35,7 @@ public class SecondActivity extends AppCompatActivity {
             String sNombre = etNombre.getText().toString();
             String sEdad = etEdad.getText().toString();
 
-            if (sNombre.matches("") && sEdad.matches("")) {
+            if (sNombre.matches("") || sEdad.matches("")) {
                 Log.v("SecondActivity", "Usuario mal introducido");
                 setResult(KO);
             }else{
