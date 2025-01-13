@@ -41,11 +41,11 @@ public interface GoRestUsuarioApiService {
             "Authorization: Bearer c2013086d51347da56494c501d63f7c14f51b908a43b9c0ec0145cfab4b901cd"
     })
     @PUT("users/{id}")
-    Call modificarUsuario(@Path("id") String id, @Body Usuario usuario);
+    Call<Void> modificarUsuario(@Path("id") String id, @Body Usuario usuario);
 
     @Headers({
             "Authorization: Bearer c2013086d51347da56494c501d63f7c14f51b908a43b9c0ec0145cfab4b901cd"
     })
     @DELETE("users/{id}")
-    Call borrarUsuario(@Path("id") String id);
+    Call<Void> borrarUsuario(@Path("id") String id);
 }

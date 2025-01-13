@@ -72,7 +72,7 @@ public class UsuarioActivity extends AppCompatActivity {
         GoRestUsuarioApiService goRestUsuarioApiService =
                 GestorUsuario.getInstance().getGoRestUserApiService();
 
-        Call llamadaBorrar = goRestUsuarioApiService.borrarUsuario(id);
+        Call<Void> llamadaBorrar = goRestUsuarioApiService.borrarUsuario(id);
 
         llamadaBorrar.enqueue(new Callback<Void>() {
             @Override
@@ -90,7 +90,7 @@ public class UsuarioActivity extends AppCompatActivity {
     public void modificarUsuario(){
         GoRestUsuarioApiService goRestUsuarioApiService = GestorUsuario.getInstance().getGoRestUserApiService();
 
-        Call llamadaBorrar = goRestUsuarioApiService.borrarUsuario(id);
+        Call<Void> llamadaBorrar = goRestUsuarioApiService.borrarUsuario(id);
 
         llamadaBorrar.enqueue(new Callback<Void>() {
             @Override

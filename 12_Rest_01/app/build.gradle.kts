@@ -41,10 +41,9 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
-    //Agregamos la dependencia de retrofit a nuestro proyecto, que previamente
+    //Agregamos las dependencias a nuestro proyecto, que previamente
     //hemos añadido la libreria en "libs.versions.toml"
     implementation(libs.retrofit)
-
     implementation(libs.gson)
     implementation(libs.converterGson)
 }
