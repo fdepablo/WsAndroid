@@ -1,7 +1,10 @@
 package com.example.a10_dialogos_01;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -49,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         Button bDialogoUnBoton = findViewById(R.id.bDialogoUnBoton);
         Button bDialogoDosBotones = findViewById(R.id.bDialogoDosBotones);
         Button bDialogoRecogerValor = findViewById(R.id.bDialogoRecogerValor);
+        Button bDialogoEnProceso = findViewById(R.id.bDialogoEnProceso);
         tvResultado = findViewById(R.id.tvResultado);
 
         bDialogoUnBoton.setOnClickListener(v -> {
@@ -100,6 +104,34 @@ public class MainActivity extends AppCompatActivity {
             DialogoRecogerValor dialogoRecogerValor = new DialogoRecogerValor();
             dialogoRecogerValor.setView(tvResultado);
             dialogoRecogerValor.show(getSupportFragmentManager(),"MainActivity");
+        });
+
+        // AlertDialog de "Progreso" Thanks Carlos! :)
+
+        // Primero inflamos el "progress_dialog.xml", que es el que vamos
+        // a usar para mostrar en el AlertDialog
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.progress_dialog, null);
+        //Creamos el dialogo
+        final AlertDialog progressDialog = new AlertDialog.Builder(this)
+                .setView(dialogView)
+                //.setCancelable(false)
+                .create();
+
+        bDialogoEnProceso.setOnClickListener(view -> {
+            Log.i("MainActivity","Mostrando process");
+            //Mostramos el dialogo
+            progressDialog.show();
+
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+
+            Log.i("MainActivity","Cancelando process");
+            //Cancelamos el dialogo
+            progressDialog.dismiss();
         });
     }
 }

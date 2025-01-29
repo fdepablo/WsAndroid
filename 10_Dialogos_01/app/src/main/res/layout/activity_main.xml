@@ -52,6 +52,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/bDialogoDosBotones" />
 
+    <Button
+        android:id="@+id/bDialogoEnProceso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        android:text="Mostrar dialogo 'En proceso...'"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bDialogoDosBotones" />
+
     <TextView
         android:id="@+id/tvResultado"
         android:layout_width="359dp"
