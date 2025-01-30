@@ -9,7 +9,7 @@
     <!--
     Componente que permite hacer el efecto de que la acción está
     en progreso
-    Con indeterminate a true establecemos que ponemos
+    Con indeterminate a true establecemos que este girando continuamente
     -->
     <ProgressBar
         android:layout_width="wrap_content"
