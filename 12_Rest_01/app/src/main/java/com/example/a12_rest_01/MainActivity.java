@@ -34,13 +34,23 @@ Para ello agregamos seguimos los sigientes pasos:
 1- En el fichero "libs.versions.toml" agregamos:
 
     retrofit = "2.11.0" en la parte de [versions]
+    gson = "2.10.1" en la parte de [versions]
+
     retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" } en la parte de [libraries]
+    gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+    converterGson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+
+Tambien agregaremos alguna librería que nos permita trabajar con Json. En este
+caso usaremos Gson, una libreria de google muy popular para serializar y
+deserializar objetos en formato Json.
 
 Notese que podemos cambiar la versión por la más actual
 
 2- En el fichero "build.gradle.kts" agregamos:
 
     implementation(libs.retrofit)
+    implementation(libs.gson)
+    implementation(libs.converterGson)
 
 Retrofit es un cliente REST extremadamente simple de configurar.
 Nos permitirá tratar las llamadas a la API como funciones Java, así definiremos
@@ -48,13 +58,6 @@ solamente las URLs que queremos llamar y los tipos de petición y respuesta que
 esperamos. Retrofit requiere un de Java 8+ o Android API 21+.
 
 https://square.github.io/retrofit/
-
-Tambien agregaremos alguna librería que nos permita trabajar con Json. En este
-caso usaremos Gson, una libreria de google muy popular para serializar y
-deserializar objetos en formato Json.
-
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation 'com.google.code.gson:gson:2.8.9'
 
 Tambien debemos dar permisos en nuestra aplicacion para contectarnos a internet.
 Tenemos que agregar la siguiente sentencia en el AndroidManifest.xml

@@ -61,7 +61,7 @@
         <Button
             android:id="@+id/btVerUsuario"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
-            android:textColor="#673AB7"
+            android:textColor="#E80808"
             android:textSize="22sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

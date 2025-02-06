@@ -23,8 +23,14 @@ A continuacion anotamos los metodos que queramos con las anotaciones
 de retrofit para agregar la funcionalidad.
  */
 public interface GoRestUsuarioApiService {
+    @Headers({
+            "Authorization: Bearer c2013086d51347da56494c501d63f7c14f51b908a43b9c0ec0145cfab4b901cd"
+    })
     @GET("users")
     Call<List<Usuario>> getUsuarios();
+    @Headers({
+            "Authorization: Bearer c2013086d51347da56494c501d63f7c14f51b908a43b9c0ec0145cfab4b901cd"
+    })
     @GET("users/{id}")
     Call<Usuario> getUsuarioPorId(@Path("id") String id);
 
