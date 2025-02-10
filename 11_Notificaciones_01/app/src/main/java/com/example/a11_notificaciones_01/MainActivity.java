@@ -98,7 +98,8 @@ public class MainActivity extends AppCompatActivity {
         //aplicación pueda mandar notificaciones.
         //Además debemos de checkear en el código si los permisos estan garantizados con el siguiente
         //condicional
-        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS)
+                != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
             // here to request the missing permissions, and then overriding
