@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "111295350904",
+    "project_id": "proyecto-saludo",
+    "storage_bucket": "proyecto-saludo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111295350904:android:02776fd30447edb7f9458d",
+        "android_client_info": {
+          "package_name": "com.example.a13_firebase_01"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "111295350904-iac37j6deg96nrf93gkr1nkh3j58lelg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFecx-jWLvz1hQ3ozR5r07FtccqwU7i3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "111295350904-iac37j6deg96nrf93gkr1nkh3j58lelg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
